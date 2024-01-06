@@ -1,0 +1,1 @@
+Before the execution of line 2 (print("Love")), there are at least 262 int objects created and still in memory. This includes 257 small positive integers (0 to 256) and 5 small negative integers (-5 to -1), which are pre-allocated during the initialization of the Python interpreter.
