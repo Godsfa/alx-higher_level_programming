@@ -1,0 +1,41 @@
+add_integer Module
+python
+Copy code
+#!/usr/bin/python3
+"""
+This module provides a function to add two integers or floats.
+
+Usage:
+    from add_integer import add_integer
+
+    result = add_integer(5, 3)
+    print(result)  # Example usage
+
+Functions:
+    add_integer(a, b=98): Adds two integers or floats and returns the result.
+
+    Args:
+        a (int or float): The first integer or float.
+        b (int or float, optional): The second integer or float. Defaults to 98.
+
+    Returns:
+        int: The addition of a and b.
+
+    Raises:
+        TypeError: If a or b is not an integer or float.
+"""
+def add_integer(a, b=98):
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer or b must be an integer")
+    if not isinstance(b, (int, float)):
+        raise TypeError("a must be an integer or b must be an integer")
+
+    a = int(a)
+    b = int(b)
+
+    return a + b
+Documentation Check
+bash
+Copy code
+python3 -c 'print(__import__("add_integer").__doc__)'
+python3 -c 'print(__import__("add_integer").add_integer.__doc__)'

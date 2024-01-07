@@ -1,0 +1,36 @@
+def text_indentation(text):
+    """
+    Prints a text with 2 new lines after each '.', '?', and ':' character.
+
+    Parameters:
+    text (str): The text to be processed and printed. Must be a string.
+
+    Raises:
+    TypeError: If 'text' is not a string, this error is raised with the message "text must be a string".
+
+    Notes:
+    - There will be no space at the beginning or at the end of each printed line.
+    - If any of the specified punctuation marks ('.', '?', ':') is followed by a space, that space is omitted.
+
+    Examples:
+    >>> text_indentation("Hello? Are you there... Yes!")
+    Hello?
+
+    Are you there...
+
+    Yes!
+    >>> text_indentation(123)
+    TypeError: text must be a string
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
+    i = 0
+    while i < len(text):
+        print(text[i], end="")
+        if text[i] in ".?:":
+            print("\n")
+            if i < len(text) - 1 and text[i + 1] == ' ':
+                i += 1
+        i += 1
+        

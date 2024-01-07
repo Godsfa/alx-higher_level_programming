@@ -1,0 +1,32 @@
+def lazy_matrix_mul(m_a, m_b):
+    """
+    Multiplies two matrices using NumPy's matmul function and returns the result.
+
+    Parameters:
+    m_a (list of lists of int/float): The first matrix, must be a list of lists of integers or floats.
+    m_b (list of lists of int/float): The second matrix, must be a list of lists of integers or floats.
+
+    Returns:
+    numpy.ndarray: The resulting matrix product of m_a and m_b.
+
+    Raises:
+    ValueError: If the matrices m_a and m_b cannot be multiplied due to incompatible dimensions.
+    TypeError: If either m_a or m_b contains elements that are not integers or floats, or if scalar operands are used.
+
+    Examples:
+    >>> lazy_matrix_mul([[1, 2]], [[3], [4]])
+    array([[11]])
+
+    >>> lazy_matrix_mul([[1, 2, 3], [4, 5, 6]], [[7, 8], [9, 10], [11, 12]])
+    array([[ 58,  64],
+           [139, 154]])
+
+    >>> lazy_matrix_mul([[1, 2]], [[3, 4]])
+    ValueError: m_a and m_b can't be multiplied
+
+    Notes:
+    - The function requires NumPy to be installed. Install it using 'pip3 install numpy==1.15.0'.
+    - The number of columns in the first matrix (m_a) must be equal to the number of rows in the second matrix (m_b) for multiplication to be possible.
+    - The resulting matrix will have the same number of rows as m_a and the same number of columns as m_b.
+    """
+    # Function implementation as provided above

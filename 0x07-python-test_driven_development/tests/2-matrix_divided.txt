@@ -1,0 +1,19 @@
+def matrix_divided(matrix, div):
+    """
+    Divides all elements of a matrix by a divisor and rounds the results to 2 decimal places.
+
+    Parameters:
+    matrix (list of lists of int/float): The matrix to be divided.
+    div (int/float): The divisor by which the matrix elements will be divided.
+
+    Raises:
+    TypeError: If the matrix is not a list of lists of integers or floats.
+    TypeError: If each row of the matrix is not of the same size.
+    TypeError: If div is not an integer or float.
+    ZeroDivisionError: If div is equal to zero.
+
+    Returns:
+    list: A new matrix with all elements divided by div, rounded to 2 decimal places.
+    """
+    # Function implementation remains the same
+    
